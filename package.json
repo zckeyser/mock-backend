@@ -1,0 +1,23 @@
+{
+  "name": "amazon-mq-poc-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/zckeyser/amazon-mq-poc-backend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/zckeyser/amazon-mq-poc-backend/issues"
+  },
+  "homepage": "https://gitlab.com/zckeyser/amazon-mq-poc-backend#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
