@@ -3,9 +3,6 @@ module.exports = {
         {
             "route": "test/foo",
             "method": "GET",
-            "input": {
-                "bar": typeof(1)
-            },
             "response": {
                 "status": 200,
                 "body": {
