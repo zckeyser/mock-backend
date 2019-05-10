@@ -57,6 +57,8 @@ function createRoute(config) {
         res.send(JSON.stringify(config.body));
     };
 
+    console.log(routeFunction);
+
     // apply the created handler to the correct route + method
     routeFunction(config.route, routeHandler);
 }
