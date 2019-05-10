@@ -37,6 +37,8 @@ function getFunctionForVerb(verb) {
 function createRoute(config) {
     var routeFunction = getFunctionForVerb(config.method);
 
+    console.log(typeof(routeFunction));
+
     if(config.input) {
         var inputValidationFunction = getInputValidationFunction(config.input);
     }
