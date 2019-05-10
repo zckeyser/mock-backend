@@ -43,6 +43,8 @@ function createRoute(config) {
         var inputValidationFunction = getInputValidationFunction(config.input);
     }
 
+    console.log(routeFunction);
+
     var routeHandler = (req, res) => {
         // do any input validation that we needed
         var validationResult = inputValidationFunction(req);
@@ -56,8 +58,6 @@ function createRoute(config) {
         res.status(config.status);
         res.send(JSON.stringify(config.body));
     };
-
-    console.log(routeFunction);
 
     // apply the created handler to the correct route + method
     routeFunction(config.route, routeHandler);
