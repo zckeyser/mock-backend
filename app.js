@@ -37,9 +37,9 @@ function getFunctionForVerb(verb) {
 }
 
 function createRoute(config) {
-    var routeFunction = getFunctionForVerb(config.method);
+    console.log(config);
 
-    console.log(typeof(routeFunction));
+    var routeFunction = getFunctionForVerb(config['method']);
 
     if(config.input) {
         var inputValidationFunction = getInputValidationFunction(config.input);
@@ -63,7 +63,7 @@ function createRoute(config) {
     routeFunction(config.route, routeHandler);
 }
 
-for(var config in routeConfigs) {
+for(var config in routeConfigs['routes']) {
     createRoute(config);
 }
 
