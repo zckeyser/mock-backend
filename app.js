@@ -37,8 +37,6 @@ function getFunctionForVerb(verb) {
 }
 
 function createRoute(config) {
-    console.log(config);
-
     var routeFunction = getFunctionForVerb(config['method']);
 
     if(config.input) {
@@ -62,6 +60,8 @@ function createRoute(config) {
     // apply the created handler to the correct route + method
     routeFunction(config.route, routeHandler);
 }
+
+console.log(routeConfigs);
 
 for(var config in routeConfigs['routes']) {
     createRoute(config);
