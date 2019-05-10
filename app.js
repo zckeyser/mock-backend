@@ -37,7 +37,7 @@ function getFunctionForVerb(verb) {
 }
 
 function createRoute(config) {
-    var routeFunction = getFunctionForVerb(config['method']);
+    var routeFunction = getFunctionForVerb(config.method);
 
     if(config.input) {
         var inputValidationFunction = getInputValidationFunction(config.input);
@@ -63,9 +63,9 @@ function createRoute(config) {
 
 console.log(routeConfigs);
 
-for(var config in routeConfigs['routes']) {
+routeConfigs["routes"].forEach((config, _) => {
     createRoute(config);
-}
+});
 
 // testing routes go here
 app.get("/", function(req, res) {
