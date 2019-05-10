@@ -32,6 +32,8 @@ function getFunctionForVerb(verb) {
     } else if(verb === "PATCH") {
         return app.patch;
     }
+
+    return null;
 }
 
 function createRoute(config) {
