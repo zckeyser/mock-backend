@@ -33,7 +33,7 @@ function getFunctionForVerb(verb) {
         return app.patch;
     }
 
-    return null;
+    throw `Matching method not found for verb ${verb}`;
 }
 
 function createRoute(config) {
